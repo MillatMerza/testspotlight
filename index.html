@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary Meta Tags -->
+  <title>Spotlight | Transform 3D Models into Interactive AR Experiences</title>
+  <meta name="description"
+    content="Spotlight transforms your 3D models into immersive augmented reality experiences. Visualize products in real-world environments with our cutting-edge AR technology. Ideal for designers, marketers, and educators." />
+  <meta name="author" content="Spotlight AR Technologies" />
+  <meta name="keywords"
+    content="Augmented Reality, 3D Modeling, AR Visualization, Interactive 3D, AR Technology, Product Visualization, AR Platform, 3D Rendering, Mixed Reality, Virtual Showroom" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourspotlightdomain.com/" />
+  <meta property="og:title" content="Spotlight | Transform 3D Models into Interactive AR Experiences" />
+  <meta property="og:description"
+    content="Visualize products in real-world environments with our cutting-edge AR technology." />
+  <meta property="og:image" content="https://yourspotlightdomain.com/images/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://yourspotlightdomain.com/" />
+  <meta property="twitter:title" content="Spotlight | Transform 3D Models into Interactive AR Experiences" />
+  <meta property="twitter:description"
+    content="Visualize products in real-world environments with our cutting-edge AR technology." />
+  <meta property="twitter:image" content="https://yourspotlightdomain.com/images/twitter-image.jpg" />
+
+  <!-- Mobile Web App Capabilities -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Onest:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Preload Critical Assets -->
+  <!-- Using relative paths for Netlify compatibility -->
+  <link rel="preload" href="./css/normalize.css" as="style" />
+  <link rel="preload" href="./css/styles.css" as="style" />
+  <link rel="preload" href="./css/extended.css" as="style" />
+  <link rel="preload" href="./js/main.js" as="script" />
+  <link rel="preload" href="https://unpkg.com/@splinetool/runtime@latest/build/runtime.js" as="script" crossorigin />
+
+  <!-- Styles in correct loading order -->
+  <!-- Load normalize first -->
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <!-- Then your base styles -->
+  <link rel="stylesheet" href="./css/styles.css" />
+  <!-- Then extended/overriding styles -->
+  <link rel="stylesheet" href="./css/extended.css" />
+  <!-- Then third-party styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Performance Optimizations -->
+  <meta http-equiv="Cache-Control" content="max-age=31536000" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Spotlight AR",
+      "applicationCategory": "Multimedia",
+      "operatingSystem": "Web, iOS, Android",
+      "description": "Transform 3D models into interactive AR experiences",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="page">
+    <!-- Loading Component -->
+    <div class="loading">
+      <div class="loading-text">
+        <span class="loading-text-words">S</span>
+        <span class="loading-text-words">P</span>
+        <span class="loading-text-words">O</span>
+        <span class="loading-text-words">T</span>
+        <span class="loading-text-words">L</span>
+        <span class="loading-text-words">I</span>
+        <span class="loading-text-words">G</span>
+        <span class="loading-text-words">H</span>
+        <span class="loading-text-words">T</span>
+      </div>
+    </div>
+
+    <!-- Navbar Component -->
+    <div class="navbar-space">
+      <nav class="navbar">
+        <div class="logo">
+          <h1>SpotLight</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#categories">Use Case</a></li>
+          <li><a href="#contact-us" class="btn secondary-btn">Contact Us</a></li>
+          <li>
+            <input type="checkbox" class="theme-checkbox" id="themeToggle" aria-label="Toggle dark/light mode" />
+          </li>
+        </ul>
+        <div class="hamburger" aria-label="Menu toggle" role="button" tabindex="0">
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu Component -->
+    <div class="menubar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#categories">Use Case</a></li>
+        <li><a href="#contact-us" class="btn secondary-btn">Contact Us</a></li>
+        <li>
+          <input type="checkbox" class="theme-checkbox" aria-label="Toggle dark/light mode" />
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hero Section Component -->
+    <section class="responsive-section" data-aos="fade-up" data-aos-duration="800">
+      <div class="flex-container">
+        <div class="flex-item">
+          <h1>Experience 3D Like Never Before, Bring Objects to Life!</h1>
+          <p>
+            Spotlight lets you turn 3D models into interactive AR experiences.
+            Simply scan, place, and explore objects in your real-world space
+            using your phone
+          </p>
+          <a href="#" class="btn primary-btn gradient-hover">Start Creating</a>
+         
+        </div>
+        <div class="flex-item robot" data-aos="fade-up" data-aos-delay="200">
+          <!-- 3D Robot Scene -->
+          <canvas id="canvas3d"></canvas>
+          <div class="gradient-divider"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="how-it-works responsive-section" id="how-it-works" data-aos="fade-up" data-aos-duration="800">
+      <div class="section-header">
+        <h2>How It Works</h2>
+        <p>
+          Transform your 3D models into immersive AR experiences in three
+          simple steps
+        </p>
+      </div>
+
+      <div class="steps-container">
+        <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number">1</div>
+          <div class="step-icon">
+            <i class="fas fa-cube"></i>
+          </div>
+          <h3>Create 3D Objects</h3>
+          <p>
+            Design and model assets using industry-standard tools: AutoCAD for
+            precision drafting, 3ds Max for detailed modeling, and Corona
+            Renderer for realistic texturing and scene preparation.
+          </p>
+        </div>
+
+        <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number">2</div>
+          <div class="step-icon">
+            <i class="fas fa-sliders-h"></i>
+          </div>
+          <h3>Configure Settings</h3>
+          <p>
+            Leverage cutting-edge web technologies such as Three.js, and
+            modern JavaScript frameworks to seamlessly deploy your models
+            online. Fine-tune interactions, materials, and placement
+            parameters using our streamlined.
+          </p>
+        </div>
+
+        <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-number">3</div>
+          <div class="step-icon">
+            <i class="fas fa-share-alt"></i>
+          </div>
+          <h3>Share & Experience</h3>
+          <p>
+            Use your mobile device to experience your AR creation in
+            real-world settings. Simply scan the QR code or follow the link to
+            seamlessly overlay your 3D model onto your surroundings.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- sections -->
+    <section class="categories-showcase responsive-section" id="categories" data-aos="fade-up" data-aos-duration="800">
+      <div class="section-header">
+        <h2>Explore Collections</h2>
+        <p>
+          Discover objects from various categories ready for AR exploration
+        </p>
+      
+      </div>
+      <!-- Furniture Collection -->
+      <div class="category-group" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="category-title">Furniture Collection</h3>
+        <div class="cards-grid">
+          <div class="category-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="card-image furniture-1">
+              <img src="/1.jpg" alt="Modern Sofa">
+            </div>
+            <div class="card-content">
+              <h4>Modern Sofa</h4>
+              <p>
+                Experience contemporary furniture design in your living space with realistic material textures.
+              </p>
+              <a href="#" class="btn primary-btn">View in AR</a>
+            </div>
+          </div>
+          <div class="category-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="card-image furniture-2">
+              <img src="/2.jpg" alt="Dining Set">
+            </div>
+            <div class="card-content">
+              <h4>Dining Set</h4>
+              <p>
+                Test different table configurations and chair arrangements in your actual dining area.
+              </p>
+              <a href="#" class="btn primary-btn">View in AR</a>
+            </div>
+          </div>
+          <div class="category-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="card-image furniture-3">
+              <img src="/3.jpg" alt="Bookshelf">
+            </div>
+            <div class="card-content">
+              <h4>Bookshelf</h4>
+              <p>
+                Visualize storage solutions with accurate dimension representation in your space.
+              </p>
+              <a href="#" class="btn primary-btn">View in AR</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    
+        
+        <!-- Medical Collection -->
+        <div class="category-group" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="category-title">Medical Models</h3>
+          <div class="cards-grid">
+            <div class="category-card" data-aos="fade-up" data-aos-delay="0">
+              <div class="card-image medical-1"></div>
+              <div class="card-content">
+                <h4>Human Anatomy</h4>
+                <p>
+                  Interactive 3D model of human muscular system with layer
+                  control functionality.
+                </p>
+                <a href="#" class="btn primary-btn">View in AR</a>
+              </div>
+            </div>
+            <div class="category-card" data-aos="fade-up" data-aos-delay="0">
+              <div class="card-image medical-2"></div>
+              <div class="card-content">
+                <h4>Surgical Tools</h4>
+                <p>
+                  Detailed models of medical instruments for training and
+                  demonstration purposes.
+                </p>
+                <a href="#" class="btn primary-btn">View in AR</a>
+              </div>
+            </div>
+            <div class="category-card" data-aos="fade-up" data-aos-delay="0">
+              <div class="card-image medical-3"></div>
+              <div class="card-content">
+                <h4>Organ Models</h4>
+                <p>
+                  Rotatable 3D heart model with cutaway views and blood flow
+                  visualization.
+                </p>
+                <a href="#" class="btn primary-btn">View in AR</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- Food Collection -->
+      <div class="category-group" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="category-title">Food & Packaging</h3>
+        <div class="cards-grid">
+          <div class="category-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="card-image food-1"></div>
+            <div class="card-content">
+              <h4>Product Packaging</h4>
+              <p>
+                View food packaging designs in realistic environments with
+                scale accuracy.
+              </p>
+              <a href="#" class="btn primary-btn">View in AR</a>
+            </div>
+          </div>
+          <div class="category-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="card-image food-2"></div>
+            <div class="card-content">
+              <h4>Restaurant Dishes</h4>
+              <p>
+                Preview menu items in AR with realistic lighting and texture
+                mapping.
+              </p>
+              <a href="#" class="btn primary-btn">View in AR</a>
+            </div>
+          </div>
+          <div class="category-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="card-image food-3"></div>
+            <div class="card-content">
+              <h4>Nutrition Display</h4>
+              <p>
+                Interactive food models with nutritional information layers.
+              </p>
+              <a href="#" class="btn primary-btn">View in AR</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clothing Collection -->
+      <div class="category-group" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="category-title">Fashion Collection</h3>
+        <div class="cards-grid">
+          <div class="category-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="card-image clothing-1"></div>
+            <div class="card-content">
+              <h4>Casual Wear</h4>
+              <p>
+                Virtual try-on for everyday outfits with realistic fabric
+                simulation.
+              </p>
+              <a href="#" class="btn primary-btn">View in AR</a>
+            </div>
+          </div>
+          <div class="category-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="card-image clothing-2"></div>
+            <div class="card-content">
+              <h4>Formal Attire</h4>
+              <p>
+                View tailored suits and dresses in your environment with
+                proper drape physics.
+              </p>
+              <a href="#" class="btn primary-btn">View in AR</a>
+            </div>
+          </div>
+          <div class="category-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="card-image clothing-3"></div>
+            <div class="card-content">
+              <h4>Accessories</h4>
+              <p>
+                Try watches, glasses, and jewelry in AR with realistic
+                reflections.
+              </p>
+              <a href="#" class="btn primary-btn">View in AR</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Add this right after the last category-group div, but before the closing section tag -->
+      <div class="explore-more-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="explore-more-content">
+          <div class="explore-more-text">
+            <h3>Discover Our Complete Collection</h3>
+            <p> Your world, your rules. Pop a dinosaur in your kitchen, park a supercar in your hallway—if you can
+              imagine it, our AR
+              can render it</p>
+          </div>
+          <div class="explore-more-button-wrapper">
+            <a href="/more-models" class="explore-more-btn">
+              <span class="btn-text">Explore Full Gallery</span>
+              <span class="btn-icon">
+                <i class="fas fa-cube"></i>
+                <i class="fas fa-arrow-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="ai-image-converter responsive-section" id="ai-image-converter"  data-aos="fade-up" data-aos-duration="800">
+      <div class="converter-wrapper">
+        <div class="converter-content">
+          <div class="converter-header">
+            <span class="subtitle gradient-text">AI-Powered Technology</span>
+            <h2>Transform 2D Images Into Detailed 3D Models</h2>
+            <p class="description">Our advanced technology uses neural networks to analyze your images and create
+              high-quality 3D models with accurate depth and textures.</p>
+          </div>
+
+
+          <div class="converter-cta">
+            <a href="/image-converter" class="btn primary-btn gradient-hover">Convert Your Image</a>
+          </div>
+        </div>
+
+        <div class="converter-visuals">
+          <div class="conversion-demo">
+            <div class="image-card">
+              <div class="card-header">Input</div>
+              <div class="card-content">
+                <i class="fas fa-image"></i>
+                <span>2D Image</span>
+              </div>
+            </div>
+
+            <div class="conversion-process">
+              <div class="process-arrow">
+                <i class="fas fa-arrow-right"></i>
+              </div>
+              <div class="process-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+
+            <div class="model-card">
+              <div class="card-header">Output</div>
+              <div class="card-content">
+                <i class="fas fa-cube"></i>
+                <span>3D Model</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="responsive-section" id="spotlight-faq" data-aos="fade-up" data-aos-duration="800">
+      <div class="faq-header">
+        <h2>FAQ</h2>
+        <p class="subheader">
+          Answers to common questions about AR experiences
+        </p>
+        <p class="description">
+          Whether you're new to augmented reality or looking to enhance your
+          current workflow, find everything you need to know about creating
+          and managing AR content with Spotlight.
+        </p>
+      </div>
+
+      <div class="faq-grid">
+        <!-- Column 1 -->
+        <div class="faq-column" data-aos="fade-up" data-aos-delay="100">
+          <div class="faq-item">
+            <div class="question">
+              <h3>What devices support AR viewing?</h3>
+              <span class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </div>
+            <div class="answer">
+              <p>
+                Spotlight works on iOS and Android devices with ARCore/ARKit
+                support. No special apps required - works directly in mobile
+                browsers.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="question">
+              <h3>How do I upload 3D models?</h3>
+              <span class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </div>
+            <div class="answer">
+              <p>
+                Use our web dashboard or API to upload GLB/GLTF files. We
+                automatically optimize models for AR viewing.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="faq-column" data-aos="fade-up" data-aos-delay="100">
+          <div class="faq-item">
+            <div class="question">
+              <h3>Can I try before subscribing?</h3>
+              <span class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </div>
+            <div class="answer">
+              <p>
+                Yes! Start with our free tier offering 5 AR experiences and
+                basic analytics.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="question">
+              <h3>What about data privacy?</h3>
+              <span class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </div>
+            <div class="answer">
+              <p>
+                All model data is encrypted at rest and in transit. We comply
+                with GDPR and CCPA regulations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="responsive-section" id="contact-us" data-aos="fade-up" data-aos-duration="800">
+      <div class="contact-header">
+        <h2>Get in Touch</h2>
+        <p class="subheader">
+          We're here to help bring your AR vision to life
+        </p>
+        <p class="description">
+          Have questions about Spotlight or need assistance with your AR
+          project? Our team of experts is ready to provide the support you
+          need.
+        </p>
+      </div>
+
+      <div class="contact-container">
+        <!-- Contact Form Column -->
+        <div class="contact-form-column" data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-card">
+            <h3>Send Us a Message</h3>
+            <form id="contactForm" action="#" method="POST">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Select a topic</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="support">Technical Support</option>
+                  <option value="pricing">Pricing & Plans</option>
+                  <option value="feature">Feature Request</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us how we can help you"
+                  required></textarea>
+              </div>
+              <button type="submit" class="submit-button">
+                <span>Send Message</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Info Column -->
+        <div class="contact-info-column" data-aos="fade-up" data-aos-delay="100">
+          <!-- Quick Contact -->
+          <div class="info-card">
+            <h3>Quick Contact</h3>
+            <div class="contact-methods">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="contact-details">
+                  <h4>Call Us</h4>
+                  <p>(+964) 07517327932</p>
+                  <p class="hours">Mon-Fri, 9AM-6PM EST</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-details">
+                  <h4>Email Us</h4>
+                  <p>support@spotlightar.com</p>
+                  <p class="hours">24/7 support for urgent issues</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Office Location -->
+          <div class="info-card">
+            <h3>Our Office</h3>
+            <div class="location-grid">
+              <div class="location">
+                <div class="location-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <h4>Nzarke, Duhok</h4>
+                <p>123 Business Avenue<br />Nzarke, Duhok 42002, Iraq</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer" data-aos="fade-up" data-aos-duration="800">
+    <div class="footer-container">
+      <!-- Logo Column -->
+      <div class="footer-column">
+        <div class="footer-logo">
+          <h2>SpotLight</h2>
+          <p class="slogan">
+            Augment Your Reality with Cutting-Edge 3D and AR Experiences.
+            Transform Your World Today!
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#categories">Use Case</a></li>
+          <li><a href="#contact-us">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Column -->
+      <div class="footer-column">
+        <h4>Connect With Us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright Bar -->
+    <div class="copyright-bar">
+      <p>&copy; 2024 SpotLight. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script type="module" src="main.js"></script>
+  <script>
+    // Initialize AOS (Animate On Scroll)
+    document.addEventListener('DOMContentLoaded', function () {
+      AOS.init({
+        once: true,      // whether animation should happen only once
+        mirror: false,   // whether elements should animate out while scrolling past them
+        duration: 700    // default animation duration
+      });
+    });
+
+
+  </script>
+</body>
+
+</html>
