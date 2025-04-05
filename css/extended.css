@@ -1659,6 +1659,7 @@ p {
   line-height: 1.6;
   margin: 0;
   flex: 1;
+  text-align: center; 
 }
 
 .card-footer {
